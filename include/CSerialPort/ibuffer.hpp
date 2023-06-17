@@ -186,9 +186,10 @@ public:
             return 0;
         }
 
-        if (size > m_maxBufferSize)
+        int usedLen = getUsedLen();
+        if (size > usedLen)
         {
-            size = m_maxBufferSize;
+            size = usedLen;
         }
 
         for (unsigned int i = 0; i < size; i++)
